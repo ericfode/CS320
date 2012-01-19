@@ -1,0 +1,542 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2012.1.19)  19 JAN 2012 13:45
+entering extended mode
+**hw1.tex
+("N:\cs320\Assignment 1\hw1.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\preprint\fullpage.sty"
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen107
+\WF@size=\dimen108
+\c@WF@wrappedlines=\count87
+\WF@box=\box26
+\WF@everypar=\toks15
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\setspace\setspace.sty"
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen109
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks17
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks18
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks19
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip47
+\thm@postskip=\skip48
+\thm@headsep=\skip49
+\dth@everypar=\toks26
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\qtree\qtree.sty"
+Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\pict2e\pict2e.sty"
+Package: pict2e 2011/04/05 v0.2y Improved picture commands (HjG,RN,JT)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\pict2e.cfg"
+File: pict2e.cfg 2005/12/29 v1.0 MiKTeX 'pict2e' configuration
+)
+Package pict2e Info: Driver file: dvips.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-dvips.def on input line 121.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\pict2e\p2e-dvips.def"
+File: p2e-dvips.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks27
+\@arclen=\dimen118
+\@arcrad=\dimen119
+\@tempdimd=\dimen120
+)
+\c@treecount=\count100
+\c@branchcount=\count101
+\parentbox=\box29
+\treebox=\box30
+\treeboxone=\box31
+\treeboxtwo=\box32
+\treeboxthree=\box33
+\treeboxfour=\box34
+\treeboxfive=\box35
+\treeboxsix=\box36
+\treeboxseven=\box37
+\treeboxeight=\box38
+\treeboxnine=\box39
+\treeboxten=\box40
+\treeboxeleven=\box41
+\treeboxtwelve=\box42
+\treeboxthirteen=\box43
+\treeboxfourteen=\box44
+\treeboxfifteen=\box45
+\treeboxsixteen=\box46
+\treeboxseventeen=\box47
+\treeboxeighteen=\box48
+\treeboxnineteen=\box49
+\treeboxtwenty=\box50
+\treeoffsetone=\skip50
+\treeoffsettwo=\skip51
+\treeoffsetthree=\skip52
+\treeoffsetfour=\skip53
+\treeoffsetfive=\skip54
+\treeoffsetsix=\skip55
+\treeoffsetseven=\skip56
+\treeoffseteight=\skip57
+\treeoffsetnine=\skip58
+\treeoffsetten=\skip59
+\treeoffseteleven=\skip60
+\treeoffsettwelve=\skip61
+\treeoffsetthirteen=\skip62
+\treeoffsetfourteen=\skip63
+\treeoffsetfifteen=\skip64
+\treeoffsetsixteen=\skip65
+\treeoffsetseventeen=\skip66
+\treeoffseteighteen=\skip67
+\treeoffsetnineteen=\skip68
+\treeoffsettwenty=\skip69
+\treeshiftone=\skip70
+\treeshifttwo=\skip71
+\treeshiftthree=\skip72
+\treeshiftfour=\skip73
+\treeshiftfive=\skip74
+\treeshiftsix=\skip75
+\treeshiftseven=\skip76
+\treeshifteight=\skip77
+\treeshiftnine=\skip78
+\treeshiftten=\skip79
+\treeshifteleven=\skip80
+\treeshifttwelve=\skip81
+\treeshiftthirteen=\skip82
+\treeshiftfourteen=\skip83
+\treeshiftfifteen=\skip84
+\treeshiftsixteen=\skip85
+\treeshiftseventeen=\skip86
+\treeshifteighteen=\skip87
+\treeshiftnineteen=\skip88
+\treeshifttwenty=\skip89
+\treewidthone=\skip90
+\treewidthtwo=\skip91
+\treewidththree=\skip92
+\treewidthfour=\skip93
+\treewidthfive=\skip94
+\treewidthsix=\skip95
+\treewidthseven=\skip96
+\treewidtheight=\skip97
+\treewidthnine=\skip98
+\treewidthten=\skip99
+\treewidtheleven=\skip100
+\treewidthtwelve=\skip101
+\treewidththirteen=\skip102
+\treewidthfourteen=\skip103
+\treewidthfifteen=\skip104
+\treewidthsixteen=\skip105
+\treewidthseventeen=\skip106
+\treewidtheighteen=\skip107
+\treewidthnineteen=\skip108
+\treewidthtwenty=\skip109
+\daughteroffsetone=\skip110
+\daughteroffsettwo=\skip111
+\daughteroffsetthree=\skip112
+\daughteroffsetfour=\skip113
+\branchwidthone=\skip114
+\branchwidthtwo=\skip115
+\branchwidththree=\skip116
+\branchwidthfour=\skip117
+\parentoffset=\skip118
+\treeoffset=\skip119
+\daughteroffset=\skip120
+\branchwidth=\skip121
+\parentwidth=\skip122
+\treewidth=\skip123
+\qta=\toks28
+\qtb=\toks29
+\nbranches=\count102
+\qroofx=\count103
+\qroofy=\count104
+\@qrscratchbox=\box51
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip124
+\subfigcapskip=\skip125
+\subfigcaptopadj=\dimen121
+\subfigbottomskip=\skip126
+\subfigcapmargin=\dimen122
+\subfiglabelskip=\skip127
+\c@subfigure=\count105
+\c@lofdepth=\count106
+\c@subtable=\count107
+\c@lotdepth=\count108
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip128
+\subfig@bottom=\skip129
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip130
+\f@ncyO@elh=\skip131
+\f@ncyO@erh=\skip132
+\f@ncyO@olh=\skip133
+\f@ncyO@orh=\skip134
+\f@ncyO@elf=\skip135
+\f@ncyO@erf=\skip136
+\f@ncyO@olf=\skip137
+\f@ncyO@orf=\skip138
+)
+\c@theorem=\count109
+\c@corollary=\count110
+\c@lemma=\count111
+\c@problem=\count112
+\c@definition=\count113
+\c@observation=\count114
+\c@example=\count115
+\c@openproblem=\count116
+\c@fact=\count117
+
+("N:\cs320\Assignment 1\algorithm2e.sty"
+Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+\c@AlgoLine=\count118
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\tools\xspace.sty"
+Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 4.01 -- december 14 2009 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip139
+\skiplinenumber=\skip140
+\skiprule=\skip141
+\skiphlne=\skip142
+\skiptext=\skip143
+\skiplength=\skip144
+\algomargin=\skip145
+\skipalgocfslide=\skip146
+\algowidth=\dimen123
+\inoutsize=\dimen124
+\inoutline=\dimen125
+\interspacetitleruled=\dimen126
+\interspacealgoruled=\dimen127
+\interspacetitleboxruled=\dimen128
+\algocf@inoutbox=\box52
+\algocf@inputbox=\box53
+\AlCapSkip=\skip147
+\AlCapHSkip=\skip148
+\algocf@nlbox=\box54
+\algocf@hangingbox=\box55
+\algocf@capbox=\box56
+\algoheightruledefault=\skip149
+\algoheightrule=\skip150
+\algotitleheightruledefault=\skip151
+\algotitleheightrule=\skip152
+\c@algocfline=\count119
+\c@algocfproc=\count120
+\c@algocf=\count121
+\algocf@algoframe=\box57
+\algocf@algobox=\box58
+)
+No file hw1.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 68.
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 37.22453pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 109.
+ ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 109.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [2]
+
+LaTeX Warning: Reference `prob:1' on page 3 undefined on input line 208.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 213.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 213.
+
+
+LaTeX Warning: Reference `prob:2' on page 3 undefined on input line 229.
+
+
+LaTeX Warning: Reference `prob:3' on page 3 undefined on input line 250.
+
+
+LaTeX Warning: Reference `fig:test' on page 3 undefined on input line 253.
+
+
+LaTeX Warning: File `Fig-6-4.pdf' not found on input line 257.
+
+
+! LaTeX Error: File `Fig-6-4.pdf' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \includegraphics[scale=0.1]{Fig-6-4.pdf}
+                                              
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Cannot determine size of graphic in Fig-6-4.pdf (no BoundingBox)
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \includegraphics[scale=0.1]{Fig-6-4.pdf}
+                                              
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: Fig-6-4.pdf Graphic file (type eps)
+<Fig-6-4.pdf>
+
+LaTeX Warning: Reference `prob:4' on page 3 undefined on input line 266.
+
+
+LaTeX Warning: Reference `prob:5' on page 3 undefined on input line 282.
+
+
+LaTeX Warning: Reference `prob:6' on page 3 undefined on input line 302.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+[3]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 321.
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
+
+ []
+
+[4]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 346.
+
+ ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+LaTeX Warning: Reference `prob:7' on page 5 undefined on input line 363.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 408--412
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
+
+ []
+
+[6] ("N:\cs320\Assignment 1\hw1.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3823 strings out of 495290
+ 48765 string characters out of 3180134
+ 121675 words of memory out of 3000000
+ 6967 multiletter control sequences out of 15000+200000
+ 12647 words of font info for 41 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 34i,12n,43p,217b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on hw1.dvi (6 pages, 15476 bytes).

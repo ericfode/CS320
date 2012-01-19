@@ -1,0 +1,435 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphics,epsfig,color}
+\usepackage{wrapfig}
+
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{amsmath,amsthm,amssymb}
+%\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{qtree}
+\usepackage{subfigure}
+\usepackage{url}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+%for code from latexdraw
+%\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+%\usepackage{pst-grad} % For gradients
+%\usepackage{pst-plot} % For axes
+
+
+\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{proposition}{Proposition}[theorem]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{claim}{Claim}[section]
+\newtheorem{problem}{Problem}
+%\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{openproblem}{Open Problem}[section]
+\newtheorem{fact}{Fact}[section]
+%\newcommand{\qedsymb}{\hfill{\rule{2mm}{2mm}}}
+
+\newcommand{\qedsymb}{\hfill{\rule{2mm}{2mm}}}
+\newenvironment{proofsketch}{\begin{trivlist}
+\item[\hspace{\labelsep}{\noindent Proof Sketch: }]
+}{\qedsymb\end{trivlist}}
+
+
+
+%the following few lines until usepackage{algorithm2e} is to avoid the
+%conflicts of algorithm2e with other packages.
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+%\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+
+%\newenvironment{proof}{\begin{trivlist}
+%\item[\hspace{\labelsep}{\bf\noindent Proof: }]}{\qedsymb\end{trivlist}}
+%\newcommand{\qed}{\hfill\rule{2mm}{2mm}}
+
+\newcommand{\remove}[1]{}
+
+
+
+%--------------------------------
+
+
+\begin{document}
+
+%\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0.4pt}
+%\thispagestyle{fancy}
+%\lhead{\bf CSCD320 Exam 1, Fall 2011, EWU\\Name: \hspace*{5cm}EWU Email: \hspace*{5cm}EWUID:}
+%\chead{}
+%\rhead{Submitted to ISSTA'04}
+%\lfoot{}
+%\cfoot{\it Submitted to}
+%\rfoot{}
+
+\fancyhead[L]{\bf CSCD320 Homework1, Winter 2012, 
+Eastern Washington University. Cheney, Washington. \\
+\bigskip Name: Eric Fode\hspace{40mm}EWU ID:005301214}
+
+
+\noindent
+\rule[0.1cm]{16.5cm}{0.01cm} 
+
+
+
+
+
+\vspace*{2mm}
+
+\newpage
+
+\begin{problem}[5 points]
+\label{prob:1}
+  Based on your learning from the CSCD300 Data Structures course,
+  describe your understanding of the connection and difference between
+  the ``data structures'' and ``algorithms''.  Say your opinions in
+  your own language. Any reasonable opinion is welcome.
+\end{problem}
+
+
+%---------------------------------------
+
+\begin{problem}[15 points]
+\label{prob:2}
+  Show: $3n^2+n\sqrt{n}=O(n^2)$
+\end{problem}
+
+
+
+%---------------------------------------
+
+\begin{problem}[15 points]
+\label{prob:3}
+Show: $2(n+100\sqrt{n})\log^2 n = o(n\sqrt{n}/\log n)$. 
+{\em (Note: $\log^2 n$ means $(\log n)^2$)}
+\end{problem}
+
+
+
+
+\begin{problem}[15 points]
+\label{prob:4}
+  Let $f(n)$ and $g(n)$ be asymptotically nonnegative functions.  Show:
+  $f(n)+g(n) = \Theta(\max\{f(n), g(n)\})$, using the definition of
+  $\Theta$.
+\end{problem}
+
+
+
+%---------------------------------------
+
+
+\begin{problem}[15 points]
+\label{prob:5}
+Let $f(n)$ be an asymptotically nonnegative function.
+Is $f(n)=\omega(f(\sqrt{n}))$ always true ? Justify your answer. 
+\end{problem}
+
+
+
+%---------------------------------------
+\begin{problem}[20]
+\label{prob:6}
+  Finding the maximum in a sequence of $n$ numbers is a simple task:
+  simply scan the sequence and pick/return the maximum. The time cost
+  of this simple method is clearly $\Theta(n)$, which is optimal
+  because one has to take one look at every number in the sequence in
+  order to find the maximum.
+  Now Dr.\ Nonsense wants to use the divide-conquer strategy to
+  overkill this task of finding the maximum among the sequence of $n$
+  number.  
+\begin{enumerate}
+\item 
+Describe the algorithmic idea and give the pseudocode of Dr.\
+Nonsense's algorithm.
+\item Give the time cost in the $\Theta$-notation of Dr.\ Nonsense's
+  algorithm by using the recursion tree method for solving the
+  recurrence. 
+\item Is this Dr.\ Nonsense's d-c based algorithm asymptotically slower
+  or faster or identical, compared with the simple $\Theta(n)$-time
+  method ? 
+\item How is the time efficiency in practice of Dr.\ Nonsense's
+  algorithm, compared the simple method ? Why ? 
+\end{enumerate}
+ 
+\end{problem}
+
+
+
+%---------------------------------------
+
+
+\begin{problem}[15 points total; 5 points for each algorithm.]
+\label{prob:7}
+ Search and learn three existing algorithms that use the
+  divide-conquer strategy (not those covered in the class and/or the
+  textbook, such as merge sort, max subarray finding algorithm, and
+  Strassen's matrix multiplication algorithm). For each algorithm, in
+  your own language, concisely and clearly describe:
+
+\begin{enumerate}
+\item  the problem statement
+
+\item  the algorithmic idea in the solution (don't just copy the code to me)
+
+\item the time complexity
+
+\item the condition, on which the worst-case running time appears. 
+
+\item the source of your finding. For example, the url of the webpages, the 
+title and page of a book, the title/author/year of an article, etc. 
+\end{enumerate}
+\end{problem}
+
+
+
+%\end{document}
+
+\newpage
+
+%---------------------------------------
+
+\bigskip
+\noindent{\bf Solution for Problem~\ref{prob:1}.}
+I really don't know ....
+
+If you want to use itemize ....
+\begin{itemize}
+\item aaaaa. 
+\item bbbbb.
+\end{itemize}
+
+%I am commented out !!
+
+If you want to use enumerate ...
+
+\begin{enumerate}
+\item ccccc
+\item dddddd
+\end{enumerate}
+
+%---------------------------------------
+\bigskip
+
+\noindent{\bf Solution for Problem~\ref{prob:2}.}
+
+
+\begin{proof}
+This problem has no sense, so there is no proof, but have to create
+something
+as constants $c$ and $n_0$,
+  such that when $n\geq n_0$,
+$$
+3n^2\log^2 n+n\sqrt{n}+\log n + \frac{n^2}{n^5}\leq c n^2
+$$
+
+That is, 
+$
+3n^2\log n+n\sqrt{n}+\log n + \frac{n^2}{n^5}\leq c n^2
+$
+\end{proof}
+
+%---------------------------------------
+\bigskip
+
+\noindent{\bf Solution for Problem~\ref{prob:3}.}
+
+
+blaalala, i have a picture to show .... in Figure~\ref{fig:test}.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.1]{Fig-6-4.pdf}
+\caption{test figure}
+\label{fig:test}
+\end{center}
+\end{figure}
+
+%---------------------------------------
+\bigskip
+
+\noindent{\bf Solution for Problem~\ref{prob:4}.}
+
+\begin{proof}
+find your own solution ... for 
+ 
+$$c_1[\max\{f(n), g(n)\}]\leq f(n)+g(n) \leq c_2[\max\{f(n), g(n)\}] 
+\textrm{, for any }
+n\geq n_0$$
+
+blalalala
+
+\end{proof}
+
+%---------------------------------------
+\bigskip
+
+\noindent{\bf Solution for Problem~\ref{prob:5}.}
+
+\begin{proof}
+I don't know. below are insane. 
+$f(n)=\omega(f(\sqrt{n}))$ ?
+
+\begin{itemize}
+\item
+yes ?  if $f(n)$, then
+$f(\sqrt{n})\neq \omega((1/2)\log n)$. 
+\item
+no ?  if $f(n)=\infty$, then
+$\sqrt{n}$. Clearly, 
+$\omega(n)$.
+\end{itemize}
+\end{proof}
+
+%---------------------------------------
+\bigskip
+
+\noindent{\bf Solution for Problem~\ref{prob:6}.}
+
+
+{\bf Idea:} find it ! \\
+
+
+
+{\bf Pseudocode:}  Below uses the algroithm2e package (.sty file must
+be in your working directory), but you don't have to use it. It's just
+for a nicer output ... 
+
+
+\begin{algorithm}[H]
+%\SetAlgoLined
+\NoCaptionOfAlgo
+%\SetAlgoNoLine
+\DontPrintSemicolon
+\caption{\bf max($A, p, r$)} 
+
+\lIf{$1>2$}{Report insane. Exit.}
+\bigskip
+
+\lIf{$x=y$}{\Return{$z$}}.
+
+\bigskip
+
+$x \leftarrow \lfloor(9\cdot G)/45\rfloor$
+\bigskip
+
+$x \leftarrow \max(A, p, q)$
+
+$y \leftarrow \min(A, q+1, r)$
+\bigskip
+
+\end{algorithm}
+
+google search for algorithm2e, you will find documents on how to use
+the macros given by algorithm2e.\\
+
+
+\newpage
+
+You can also use the {\bf following}. 
+
+\begin{verbatim}
+dafda
+dafdafdafda
+  daljdlk 
+ jkalf jalj lk jlg jlkajg klg ;jsfg jsf 
+j4l26j5i6,v5bb b53bu 63n j6b j
+\end{verbatim}
+
+The {\em verbatim} macro will tell latex to output exactly what you
+type, so it's a convienent way to let the output to be what you see as
+what you have. So using verbatim might be another way to write your
+pseudo code, but the bad thing is you cannot type those ``greek''
+letters ......  
+
+%---------------------------------------
+\bigskip
+
+\noindent{\bf Solution for Problem~\ref{prob:7}.}
+
+Sorry, i have no idea about this problem. 
+
+\vspace*{+1cm}
+
+{\LARGE 
+Play around with this sample, try different tricks/options/toys to see
+the change in the output. Whenever you have a question, it's alwyas a
+good idea to ask Google. You can also google search for
+docs/videos/slides that teach how to use latex. 
+}
+
+
+
+Last note about including a picture. 
+
+\begin{verbatim}
+You can save a figure in a pdf, jgg, or eps files, and use the command
+\includegraphics{figfilename} to includge the figure (find the example
+in the sample article). 
+
+If you use Linux/Mac and use command line to complile you latex file
+to get the output pdf file. 
+
+1. if your figure file is in .pdf or .jpg, you have to use the command
+
+> pdflatex hw1.tex
+
+2. if your figure file is in a .eps file, then you have to type
+commands:
+
+> latex hw1.tex
+> dvipdf hw1.dvi
+
+
+or (if you also want to get the hw.ps file as the by-product)
+
+> latex hw1.tex
+> dvips hw1.dvi
+> ps2pdf hw1.ps
+
+\end{verbatim}
+
+\newpage
+About how to create a figure file, there are many tool for that. One
+thing you should know is that you figure should have a tight bounding
+box, meaning no wide empty area is left around the figure, so that
+you won't have space wasted in your article.\\
+
+
+Several example tools to create figs. \\
+
+1. use ppt to create the figure, print that particular slide into a
+pdf file, open the pdf using FULL acrobat (acrobat reader does not
+have this function), crop the figure are out (I remeber ``crop''
+should be somewhere in the ``too'' menu item in the acrobat).  Then
+save the cropped figure out as a new pdf file or eps file, depending
+on your taste. \\
+
+2. several other tools on linux: xfig, latexdraw. I use latexdraw a
+lot for my lecture slides. \\
+
+3. you also find other tools that I don't know from google search.  
+
+
+
+
+\end{document}
+
+
+
+
