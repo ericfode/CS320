@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphics,epsfig,color}
+\usepackage{wrapfig}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{url}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{openproblem}{Open Problem}[section]
+\newtheorem{fact}{Fact}[section]
+
+\newcommand{\qedsymb}{\hfill{\rule{2mm}{2mm}}}
+\newenvironment{proofsketch}
+{
+	\begin{trivlist}
+	\item[\hspace{\labelsep}{\noindent Proof Sketch: }]
+}{\qedsymb\end{trivlist}}
+
+
+
+%the following few lines until usepackage{algorithm2e} is to avoid the
+%conflicts of algorithm2e with other packages.
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\newcommand{\remove}[1]{}
+
+
+
+%--------------------------------
+
+
+\begin{document}
+
+	\renewcommand{\headrulewidth}{0.4pt}
+	
+	\fancyhead[L]{\bf CSCD320 Homework1, Winter 2012, 
+	Eastern Washington University. Cheney, Washington. \\
+	\bigskip Name: Eric Fode\hspace{40mm}EWU ID:005301214}
+	
+	
+	\noindent
+	\rule[0.1cm]{16.5cm}{0.01cm} 
+	
+	\vspace*{2mm}
+	
+	
+
+	
+	
+	\bigskip
+	\bigskip
+	\noindent{\bf Solution for Problem 1}
+	%---------------------------------------
+	\begin{proof} Prove that $T(n) = 2T(n/3) +n^2 = \theta(n^2)$ using induction\\
+	 	Claim: if $T(n) = 2T(n/3) +n^2$ $T(n) \leq c(n^2)$ for some constant c\\
+	 	Assume:	\\
+	 	$$T(1) = 2$$
+	 	$$c = 2$$
+		Base Case of 3:	
+		 	\begin{align*}
+		 		T(3) &= 2T(3/3) + 3^2\\
+		 		&=2 * 2 + 9\\
+		 		&= 13
+		 	\end{align*}
+		Hypothesis: assume $T(m) \leq c*m^2$ is true for all $m = 3,...,n$\\
+		Inductive step: when $m = n + 1$
+		\begin{align*}
+			T(n+1) &= 2T(n/3) + n^2\\
+			&=2T(\frac{n+1}{3}) + (n+1)^2\\
+			&<= c (n+1)^2 + (n+1)^2\\
+			&< (n+1)^2(c+1)
+		\end{align*}
+	\end{proof}
+	\newpage
+	\noindent{\bf Solution for Problem 2}
+	\begin{enumerate}
+	\item $T(n) = 4T(n/2) + 3n^2 - 9n$\\
+	$a = 4, b =2, f(n) = 3n^2 -9n$\\
+	case 2 is satisfied since
+	\begin{align*}
+	3n^2 - 9n &= \theta(n^log_{2}4)\\
+	&= \theta(n^2 log n)
+	\end{align*}
+	so
+	$$T(n) = \theta(n^2)$$
+	\item $T(n) = 4T(n2) + 2n^3 - 100 n^2$\\
+	$a = 4, b =2,f(n) = 2n^3 - 100 n^2$\\
+	case 3 is satisfied since
+	$$2n^3 - 100n^2 = \Omega(n^2+1)$$
+	and
+	$$4 * ((n) ^ 3 - 50n^2) \leq 1/2 (2n^3 - 100 n^2) $$
+	so
+	$$T(n) = \theta(n^3)$$
+	\item $T(n) = 4T(n/2) + n + 5 log n$\\
+	$a = 4 , b= 2, f(n) = n + 5 log n$\\
+	case 1 is satisfied since 
+	$$n + 5 log n = O(n^{2 -1})$$
+	so
+	$$T(n) = \theta(n^2)$$
+	\item $T(n) = 8T(n/2) + n^2 + n log n$\\
+	$a = 8 , b= 2, f(n) = n^2 + n log n$\\
+	case 1 is satisfied since
+	$$n^2 + n log n = O(n^{3 -1})$$
+	so
+	$$T(n) = \theta(n^3)$$
+	\item $T(n) = 8T(n/2) + 4n^3 + 5n^2$\\
+	$a = 8 , b= 2, f(n) = 4n^3 + 5n^2$\\
+	case 2 is satisfied since
+	$$4n^3 + 5n^2 = \theta(n^{3})$$
+	so
+	$$T(n) = \theta(n^3log n)$$
+	
+	\item $T(n) = 8T(n/2) + 2^-10 n^4 + 6n^3$\\
+	$a = 8 , b= 2, f(n) = 2^-10 n^4 + 6n^3$\\
+	case 3 is satisfied since
+	$$ 2^-10 n^4 + 6n^3 = \Omega(n^{3}+1)$$
+	and
+	$$ (frac{2^-10 n}{2})^4 + 3n^3 \leq c (2^-10 n^4 + 6n^3)$$
+	when n is large
+	so
+	$$T(n) = \theta(n^4)$$	
+	\end{enumerate}
+	%---------------------------------------
+	\bigskip
+	
+	\noindent{\bf Solution for Problem  3}
+	
+	
+	\bigskip
+	\noindent{\bf Solution for Problem 4}
+	\begin{enumerate}
+	\item Idea: navigate to bottom of tree and step back one level
+	compair subtree left max, subtree right max and this tree total return max of these three
+	repeate until top node is reached
+	\item  Pseudocode:
+		
+	\begin{algorithm}[H]
+		\NoCaptionOfAlgo
+		\caption{\bf maxtree($tree$)}
+		
+		\KwIn{A tree}
+		\KwResult{The root node of the largest subtree}
+		\Begin{
+					\If{$tree == null$}
+					{
+						return 0\;
+					}
+					\If{$tree.leaf == true$}
+					{
+						$tree.head.value = tree.head.weight$\;
+						return $tree.head$\;
+					}
+					$leftReturn \longleftarrow maxtree(tree.left)$\;
+					$rightReturn \longleftarrow maxtree(tree.right)$\;
+					$tree.head.value \longleftarrow tree.left.value + tree.right.value + tree.head.weight$\;
+					
+					\If{$leftReturn.value > rightReturn.value$ {\bf and} $leftReturn.value > tree.head.value$}
+					{
+						\Return $leftReturn$\;
+					}
+					\If{$rightReturn.value > leftReturn.value$ {\bf and} $rightReturn.value > tree.head.value$}
+					{
+						\Return $rightReturn$\;
+					}
+					\If{$tree.head.value > leftReturn.value$ {\bf and} $tree.head.value > rightReturn.value$}
+					{
+						\Return $tree.head$\;
+					}
+					\If{$leftReturn.value == rightReturn.value$ {\bf and} $rightReturn.value > tree.head.value$}
+					{
+						\Return $rightReturn$\;
+					}
+					
+				}
+		}
+	\end{algorithm}
+	\item Analyze:
+	This algorithm can be represented by the following recurance 
+	$$T(n) = T(n/2)+ c 
+	%---------------------------------------
+	\bigskip
+	
+	\noindent{\bf Solution for Problem 5}
+	
+	
+	
+\end{document}
+
+
+
+
