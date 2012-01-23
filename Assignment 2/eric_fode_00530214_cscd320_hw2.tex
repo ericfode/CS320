@@ -7,6 +7,7 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{url}
 \usepackage{fancyhdr}
+\usepackage{enumitem}
 \pagestyle{fancy}
 
 
@@ -48,28 +49,17 @@
 \begin{document}
 
 	\renewcommand{\headrulewidth}{0.4pt}
-	
+	\setlength{\headheight}{38.0pt}
 	\fancyhead[L]{\bf CSCD320 Homework1, Winter 2012, 
 	Eastern Washington University. Cheney, Washington. \\
 	\bigskip Name: Eric Fode\hspace{40mm}EWU ID:005301214}
-	
-	
-	\noindent
-	\rule[0.1cm]{16.5cm}{0.01cm} 
-	
-	\vspace*{2mm}
-	
-	
 
-	
-	
-	\bigskip
-	\bigskip
+
 	\noindent{\bf Solution for Problem 1}
 	%---------------------------------------
 	\begin{proof} Prove that $T(n) = 2T(n/3) +n^2 = \theta(n^2)$ using induction\\
-	 	Claim: if $T(n) = 2T(n/3) +n^2$ $T(n) \leq c(n^2)$ for some constant c\\
-	 	Assume:	\\
+	 	{\bf Claim:} if $T(n) = 2T(n/3) +n^2$ then $T(n) \leq c(n^2)$ for some constant c\\
+	 	{\bf Assume:}	
 	 	$$T(1) = 2$$
 	 	$$c = 2$$
 		Base Case of 3:	
@@ -90,51 +80,43 @@
 	\newpage
 	\noindent{\bf Solution for Problem 2}
 	\begin{enumerate}
-	\item $T(n) = 4T(n/2) + 3n^2 - 9n$\\
-	$a = 4, b =2, f(n) = 3n^2 -9n$\\
-	case 2 is satisfied since
-	\begin{align*}
-	3n^2 - 9n &= \theta(n^log_{2}4)\\
-	&= \theta(n^2 log n)
-	\end{align*}
-	so
-	$$T(n) = \theta(n^2)$$
-	\item $T(n) = 4T(n2) + 2n^3 - 100 n^2$\\
-	$a = 4, b =2,f(n) = 2n^3 - 100 n^2$\\
-	case 3 is satisfied since
-	$$2n^3 - 100n^2 = \Omega(n^2+1)$$
-	and
-	$$4 * ((n) ^ 3 - 50n^2) \leq 1/2 (2n^3 - 100 n^2) $$
-	so
-	$$T(n) = \theta(n^3)$$
-	\item $T(n) = 4T(n/2) + n + 5 log n$\\
-	$a = 4 , b= 2, f(n) = n + 5 log n$\\
-	case 1 is satisfied since 
-	$$n + 5 log n = O(n^{2 -1})$$
-	so
-	$$T(n) = \theta(n^2)$$
-	\item $T(n) = 8T(n/2) + n^2 + n log n$\\
-	$a = 8 , b= 2, f(n) = n^2 + n log n$\\
-	case 1 is satisfied since
-	$$n^2 + n log n = O(n^{3 -1})$$
-	so
-	$$T(n) = \theta(n^3)$$
-	\item $T(n) = 8T(n/2) + 4n^3 + 5n^2$\\
-	$a = 8 , b= 2, f(n) = 4n^3 + 5n^2$\\
-	case 2 is satisfied since
-	$$4n^3 + 5n^2 = \theta(n^{3})$$
-	so
-	$$T(n) = \theta(n^3log n)$$
-	
-	\item $T(n) = 8T(n/2) + 2^-10 n^4 + 6n^3$\\
-	$a = 8 , b= 2, f(n) = 2^-10 n^4 + 6n^3$\\
-	case 3 is satisfied since
-	$$ 2^-10 n^4 + 6n^3 = \Omega(n^{3}+1)$$
-	and
-	$$ (frac{2^-10 n}{2})^4 + 3n^3 \leq c (2^-10 n^4 + 6n^3)$$
-	when n is large
-	so
-	$$T(n) = \theta(n^4)$$	
+		\item $T(n) = 4T(n/2) + 3n^2 - 9n$\\
+			$a = 4, b =2, f(n) = 3n^2 -9n$
+			case 2
+			$$3n^2 - 9n = \theta(n^2)$$
+			so
+			$$T(n) = \theta(n^2)$$
+		\item $T(n) = 4T(n2) + 2n^3 - 100 n^2$\\
+			$a = 4, b =2,f(n) = 2n^3 - 100 n^2$	case 3
+			$$2n^3 - 100n^2 = \Omega(n^{2+1})$$
+			and
+			$$4 * ((n) ^ 3 - 50n^2) \leq 1/2 (2n^3 - 100 n^2) $$
+			so
+			$$T(n) = \theta(n^3)$$
+		\item $T(n) = 4T(n/2) + n + 5 log n$\\
+			$a = 4 , b= 2, f(n) = n + 5 log n$ case 1
+			$$n + 5 \log n = O(n^{2 -1})$$
+			so
+			$$T(n) = \theta(n^2)$$
+		\item $T(n) = 8T(n/2) + n^2 + n log n$\\
+			$a = 8 , b= 2, f(n) = n^2 + n log n$ case 1
+			$$n^2 + n \log n = O(n^{3 -1})$$
+			so
+			$$T(n) = \theta(n^3)$$
+		\item $T(n) = 8T(n/2) + 4n^3 + 5n^2$\\
+			$a = 8 , b= 2, f(n) = 4n^3 + 5n^2$ case 2
+			$$4n^3 + 5n^2 = \theta(n^{3})$$
+			so
+			$$T(n) = \theta(n^3\log n)$$
+			
+		\item $T(n) = 8T(n/2) + 2^{-10} n^4 + 6n^3$\\
+			$a = 8 , b= 2, f(n) = 2^{-10} n^4 + 6n^3$	case 3
+			$$ 2^{-10} n^4 + 6n^3 = \Omega(n^{3+1})$$
+			and
+			$$ \frac{2^{-10} n^4}{2} + 3n^3 \leq c (2^{-10} n^4 + 6n^3)$$
+			when n is large
+			so
+			$$T(n) = \theta(n^4)$$	
 	\end{enumerate}
 	%---------------------------------------
 	\bigskip
@@ -144,60 +126,97 @@
 	
 	\bigskip
 	\noindent{\bf Solution for Problem 4}
-	\begin{enumerate}
+	\begin{enumerate}[leftmargin=0pt]
 	\item Idea: navigate to bottom of tree and step back one level
-	compair subtree left max, subtree right max and this tree total return max of these three
-	repeate until top node is reached
-	\item  Pseudocode:
+		compair subtree left max, subtree right max and this tree total return max of these three
+		repeate until top node is reached
+		\item  Pseudocode:
 		
-	\begin{algorithm}[H]
-		\NoCaptionOfAlgo
-		\caption{\bf maxtree($tree$)}
-		
-		\KwIn{A tree}
-		\KwResult{The root node of the largest subtree}
-		\Begin{
-					\If{$tree == null$}
-					{
-						return 0\;
-					}
-					\If{$tree.leaf == true$}
-					{
-						$tree.head.value = tree.head.weight$\;
-						return $tree.head$\;
-					}
-					$leftReturn \longleftarrow maxtree(tree.left)$\;
-					$rightReturn \longleftarrow maxtree(tree.right)$\;
-					$tree.head.value \longleftarrow tree.left.value + tree.right.value + tree.head.weight$\;
-					
-					\If{$leftReturn.value > rightReturn.value$ {\bf and} $leftReturn.value > tree.head.value$}
-					{
-						\Return $leftReturn$\;
-					}
-					\If{$rightReturn.value > leftReturn.value$ {\bf and} $rightReturn.value > tree.head.value$}
-					{
-						\Return $rightReturn$\;
-					}
-					\If{$tree.head.value > leftReturn.value$ {\bf and} $tree.head.value > rightReturn.value$}
-					{
-						\Return $tree.head$\;
-					}
-					\If{$leftReturn.value == rightReturn.value$ {\bf and} $rightReturn.value > tree.head.value$}
-					{
-						\Return $rightReturn$\;
-					}
-					
-				}
-		}
-	\end{algorithm}
-	\item Analyze:
-	This algorithm can be represented by the following recurance 
-	$$T(n) = T(n/2)+ c 
+		\begin{algorithm}[H]
+				\NoCaptionOfAlgo
+				\caption{\bf maxtree($tree$)}
+				\KwIn{A tree}
+				\KwResult{The root node of the largest subtree}
+				\Begin{
+							\If{$tree == null$}
+							{
+								return 0\;
+							}
+							\If{$tree.leaf == true$}
+							{
+								$tree.head.value = tree.head.weight$\;
+								return $tree.head$\;
+							}
+							$leftReturn \longleftarrow maxtree(tree.left)$\;
+							$rightReturn \longleftarrow maxtree(tree.right)$\;
+							$tree.head.value \longleftarrow tree.left.value + tree.right.value + tree.head.weight$\;
+							
+							\If{$leftReturn.value > rightReturn.value$ {\bf and} $leftReturn.value > tree.head.value$}
+							{
+								\Return $leftReturn$\;
+							}
+							\If{$rightReturn.value > leftReturn.value$ {\bf and} $rightReturn.value > tree.head.value$}
+							{
+								\Return $rightReturn$\;
+							}
+							\If{$tree.head.value > leftReturn.value$ {\bf and} $tree.head.value > rightReturn.value$}
+							{
+								\Return $tree.head$\;
+							}
+							\If{$leftReturn.value == rightReturn.value$ {\bf and}\\ $rightReturn.value > tree.head.value$}
+							{
+								\Return $rightReturn$\;
+							}
+							
+						}
+				
+			\end{algorithm}
+		\newpage
+		\item Analyze:
+			This algorithm can be represented by the following recurance 
+			$$T(n) = 2T(n/2)+ c $$
+			which using the master therom can be converted to
+			$$T(n) = O(n)$$
+	\end{enumerate}
 	%---------------------------------------
 	\bigskip
 	
-	\noindent{\bf Solution for Problem 5}
-	
+	\noindent{\bf Solution for Problem 5}\\
+	{\bf BST}\\
+	{\bf Pros:}
+	\begin{enumerate}
+		\item extermly space effcent, they only take up $O(n*c)$ space.
+		\item fast lookup, access time for a givin index is $O(\log_{2} n)$.
+		\item fast find, find time is $O(\log_{2} n)$ assuming a compair operation is defined.
+		\item assuming a compair operation is defined items are sorted as they are inserted.
+		\item if converted to anouther type of data structure it is trivial to retain order of items.
+	\end{enumerate}
+	{\bf Cons:}
+	\begin{enumerate}
+		\item Insert can be and cause tree to have to restructure.
+		\item Remove can be expensive and cause tree to restructure.
+		\item Insert and remove are not constant time operations.
+	\end{enumerate}
+	{\bf Best Use Cases:}
+	\begin{enumerate}
+		\item When data will not be added or deleted frequently.
+		\item When searching is required.
+		\item When only one ordering will be used
+	\end{enumerate}
+	{\bf Hash Table}
+	{\Pros:}
+	\begin{enumerate}
+		\item extermly fast lookup $O(1)$
+		\item extermly fast insert (assuming that hash table is large enugh to hold new item) $O(c)$
+		\item extermly fast delete $O(1)$
+		\item extermly fast modify $O(c)$
+	\end{enumerate}
+	{\Cons:}
+	\begin{enumerate}
+		\item slow search $O(n)$
+		\item no ordering
+		\item list can be very large to accomidate room for all possible hashs
+	\end{enumerate}
 	
 	
 \end{document}
