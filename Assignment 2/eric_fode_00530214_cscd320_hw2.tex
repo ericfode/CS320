@@ -203,21 +203,26 @@
 		\item When searching is required.
 		\item When only one ordering will be used
 	\end{enumerate}
-	{\bf Hash Table}
-	{\Pros:}
+	{\bf Hash Table}\\
+	{\bf Pros:}
 	\begin{enumerate}
-		\item extermly fast lookup $O(1)$
-		\item extermly fast insert (assuming that hash table is large enugh to hold new item) $O(c)$
-		\item extermly fast delete $O(1)$
-		\item extermly fast modify $O(c)$
+		\item Extermly fast lookup $O(1)$.
+		\item Extermly fast insert (assuming that hash table is large enugh to hold new item) $O(c)$.
+		\item Extermly fast delete $O(1)$.
+		\item Extermly fast modify $O(c)$.
 	\end{enumerate}
-	{\Cons:}
+	{\bf Cons:}
 	\begin{enumerate}
-		\item slow search $O(n)$
-		\item no ordering
-		\item list can be very large to accomidate room for all possible hashs
+		\item Slow search $O(n)$.
+		\item No ordering.
+		\item List can be very large to accomidate room for all possible hashs.
 	\end{enumerate}
-	
+	{\bf Best Use Cases:}
+	\begin{enumerate}
+		\item When data is constantly being added and removed.
+		\item When data is ordered on hash.
+		\item When space is unlimited and speed is critical
+	\end{enumerate}
 	
 \end{document}
 
