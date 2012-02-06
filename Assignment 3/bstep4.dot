@@ -1,0 +1,22 @@
+		graph g{
+			node[ordering=out];
+			11[shape=circle];
+			7[shape=circle];
+			15[shape=circle];
+			8[shape=doublecircle];
+			node[shape=circle,color=black,style=filled,fillcolor=black];
+			e1;
+			e2;
+			e3;
+			e4;
+			e5;
+			11--7;
+			11--15;
+			7--e5;
+			7--8;
+			8--e1;
+			8--e2;
+			15--e3;
+			15--e4;
+			
+		}

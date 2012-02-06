@@ -1,0 +1,1 @@
+graph step2 { 12 [shape=circle]; node [shape=circle, color=black]; e1 [style=filled, fillcolor=black]; e2 [style=filled, fillcolor=black]; 12--e1; 12--e2; }

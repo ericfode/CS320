@@ -1,0 +1,18 @@
+		graph g{
+			node[ordering=out];
+			7[shape=circle];
+			15[shape=circle];
+			8[shape=circle];
+			node[shape=circle,color=black,style=filled,fillcolor=black];
+			e1;
+			e2;
+			e3;
+			e4;
+			7--8;
+			7--15;
+			8--e1;
+			8--e2;
+			15--e3;
+			15--e4;
+			
+		}

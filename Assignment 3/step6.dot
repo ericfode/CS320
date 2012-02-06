@@ -1,0 +1,1 @@
+graph step6 { node[ordering=out]; 17 [shape=circle]; 19 [shape=doublecircle]; 12 [shape=doublecircle]; node [shape=circle, color=black]; e1 [style=filled, fillcolor=black]; e2 [style=filled, fillcolor=black]; e3 [style=filled, fillcolor=black]; e4 [style=filled, fillcolor=black]; 17--12; 17--19; 12--e1; 12--e2; 19--e3; 19--e4; }
