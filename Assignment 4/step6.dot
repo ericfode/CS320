@@ -1,10 +1,9 @@
 digraph one {
 	node [shape = record, height=.1];
 	node0[label = "<f0> | <f1> M | <f2> "];
-	node1[label = "<f0> | <f1> C | <f2> G |<f3> H | <f4> "];
-	node2[label = "<f0> | <f1> P |<f2> X | <f3> "];
+	node1[label = "<f0> | <f1> C || <f2> G ||<f3> H | <f4> "];
+	node2[label = "<f0> | <f1> P ||<f2> X | <f3> "];
 	
 	"node0":f0 -> "node1":f2;
 	"node0":f2 -> "node2";
-
 }
