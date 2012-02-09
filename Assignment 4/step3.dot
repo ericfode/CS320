@@ -1,0 +1,5 @@
+digraph one {
+	node [shape = record, height=.1];
+	node0[label = "<f0> | <f1> C | <f2> M | <f3> P | <f4> "];
+
+}
