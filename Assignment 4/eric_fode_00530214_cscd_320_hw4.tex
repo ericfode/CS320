@@ -8,7 +8,6 @@
 \usepackage{url}
 \usepackage{fancyhdr}
 \usepackage{enumitem}
-
 \pagestyle{fancy}
 
 
@@ -57,21 +56,40 @@
 
 
 	\noindent{\bf Solution for Problem 1}\\
-	\includegraphics[scale=.5]{step1.pdf}
-	\includegraphics[scale=.5]{step2.pdf}
-	\includegraphics[scale=.5]{step3.pdf}
-	\includegraphics[scale=.5]{step4.pdf}\\
-	\includegraphics[scale=.5]{step5.pdf}
-	\includegraphics[scale=.5]{step6.pdf}\\
-	\includegraphics[scale=.5]{step7.pdf}
-	\includegraphics[scale=.5]{step8.pdf}\\
-	\includegraphics[scale=.5]{step9.pdf}\\
-	\includegraphics[scale=.5]{step10.pdf}\\
-	\includegraphics[scale=.5]{step11.pdf}
-	
-	\newpage
+		\includegraphics[scale=.5]{step1.pdf}
+		\includegraphics[scale=.5]{step2.pdf}
+		\includegraphics[scale=.5]{step3.pdf}
+		\includegraphics[scale=.5]{step4.pdf}\\
+		\includegraphics[scale=.5]{step5.pdf}
+		\includegraphics[scale=.5]{step6.pdf}\\
+		\includegraphics[scale=.5]{step7.pdf}
+		\includegraphics[scale=.5]{step8.pdf}\\
+		\includegraphics[scale=.5]{step9.pdf}\\
+		\includegraphics[scale=.5]{step10.pdf}\\
+		\includegraphics[scale=.5]{step11.pdf}\\	
+	\begin{algorithm}[H]
+				\NoCaptionOfAlgo
+				\caption{\bf preOrderTree($treeArray,root,index$)}
+				\KwIn{A preordered array,The root of the tree (starting with a node that has the first value of the array,the arrayIndex}
+				\KwResult{The tree that the preorder array represent in attached to the root node}
+				\Begin{
+						\If{$treeArray[index] < root.value$}
+						{
+							$root.left = node(treeArray[index]))$\;
+							$index \longleftarrow preOrderTree(treeArray,root.left,index)$\;
+							$root.right = node(treeArray[index]))$\;
+							$index \longleftarrow preOrderTree(treeArray,root.right,index)$\;
+						}
+						\Return $index+1$\;
+						
+						}				
+			\end{algorithm}	
+	\noindent{\bf Analysis:} This should take $O(n)$ time
+		\bigskip
 	
 	\noindent{\bf Solution for Problem  2}\\
+	\noindent{\bf Idea:} Find the mid point of the array make it the root of the current tree, recurse for the left and right sides of the tree
+	using only the upper half or the lower half of the array until there are no items left
 	
 	\begin{algorithm}[H]
 		\NoCaptionOfAlgo
@@ -93,9 +111,8 @@
 	\noindent{\bf Analysis:} This should take $O(n)$ time
 	\bigskip
 	
-	\noindent{\bf Solution for Problem 3}\\
-	\bigskip
+\noindent{\bf Solution for Problem 3}\\
+\bigskip
 	
-	\noindent{\bf Solution for Problem 4}\\
-	
+\noindent{\bf Solution for Problem 4}\\
 \end{document}
