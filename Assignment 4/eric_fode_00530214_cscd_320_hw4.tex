@@ -67,52 +67,103 @@
 		\includegraphics[scale=.5]{step9.pdf}\\
 		\includegraphics[scale=.5]{step10.pdf}\\
 		\includegraphics[scale=.5]{step11.pdf}\\	
-	\begin{algorithm}[H]
-				\NoCaptionOfAlgo
-				\caption{\bf preOrderTree($treeArray,root,index$)}
-				\KwIn{A preordered array,The root of the tree (starting with a node that has the first value of the array,the arrayIndex}
-				\KwResult{The tree that the preorder array represent in attached to the root node}
-				\Begin{
-						\If{$treeArray[index] < root.value$}
-						{
-							$root.left = node(treeArray[index]))$\;
-							$index \longleftarrow preOrderTree(treeArray,root.left,index)$\;
-							$root.right = node(treeArray[index]))$\;
-							$index \longleftarrow preOrderTree(treeArray,root.right,index)$\;
-						}
-						\Return $index+1$\;
-						
-						}				
-			\end{algorithm}	
-	\noindent{\bf Analysis:} This should take $O(n)$ time
-		\bigskip
+		
+	\newpage
 	
-	\noindent{\bf Solution for Problem  2}\\
-	\noindent{\bf Idea:} Find the mid point of the array make it the root of the current tree, recurse for the left and right sides of the tree
-	using only the upper half or the lower half of the array until there are no items left
+	\noindent{\bf Solution for Problem 2}\\
+		\includegraphics[scale=.5]{bstep1.pdf}\\
+		\includegraphics[scale=.5]{bstep2.pdf}\\
+		\includegraphics[scale=.5]{bstep3.pdf}\\
+		\includegraphics[scale=.5]{bstep4.pdf}\\
+		\includegraphics[scale=.5]{bstep5.pdf}\\
+		
+	\newpage
+	\noindent{\bf Solution for Problem 3}\\
 	
+	\noindent{\bf Part 1 Idea:} To find the max of a tree given the root of the tree simply navigate right and down until there are no more nodes to iterate through
+	
+	\noindent{\bf Part 1 Algorithm:}\\
 	\begin{algorithm}[H]
 		\NoCaptionOfAlgo
-		\caption{\bf sortedTree($treeArray$)}
-		\KwIn{A slice of a sorted array}
-		\KwResult{A BST that has a height bounded by $log(n)$}
-		\Begin{
+		\caption{\bf bTreeFindMax($root$)}
+		\SetKwData{ChildMax}{childMax}\SetKwData{Null}{null}
+		\SetKwFunction{BTreeFindMax}{bTreeFindMax}
+		\SetKwFunction{DISKREAD}{DISKREAD}
+		\KwIn{The root of a b-tree that is in memory}
+		\KwResult{The max item in the b-tree}
 		
-			\If{treeArray.size = 1}
+		\Begin{
+			\If{$root == null$}
 			{
-				\Return $new node(treeArray[0])$\;
+				\Return $null$;
 			}
-			$root = new node(treeArray[treeArray.size/2])$\;
-			$root.left \longleftarrow sortedTree(treeArray[0:treeArray.size/2])$\;
-			$root.right \longleftarrow sortedTree(treeArray[treeArray.size/2+1:treeArray.size])$\;
-			\Return $root$\;
+			\ChildMax $\leftarrow$ \BTreeFindMax{\DISKREAD{$root.lastChild$}}\;
+		
+			\If{\ChildMax $== null$}
+			{
+				\Return{$root$, $root[root.n-1]$}\;
+			}	
+			\Else
+			{
+				\Return{\ChildMax}\;
+			}
 		}
-		\end{algorithm}
-	\noindent{\bf Analysis:} This should take $O(n)$ time
+	\end{algorithm}
+	
+	\noindent{\bf Part 1 Analysis:} This should take $O(log(h))$ time including disk operations
 	\bigskip
 	
-\noindent{\bf Solution for Problem 3}\\
-\bigskip
+
+	\noindent{\bf Part 2 Idea:} To find the predecessor of a node if the index of the key is 0 go to the parent and return the last key that less then the first key. If index greater then 0 check for a child nodes attached to the i'th slot for a child node (the position directly left of i)  less then i if one exists the predecessor is the max of the b-tree rooted at the roots child, if no child exists then the predecessor is the key at $i-1$.
+	\newpage
+	\noindent{\bf Part 2 Algorithm:}\\
+	\begin{algorithm}[H]
+		\NoCaptionOfAlgo
+		\caption{\bf BTreePredecessor($node$, $i$)}
+		\SetKwFunction{BTreeFindMax}{BTreeFindMax}
+		\SetKwFunction{DISKREAD}{DISKREAD}
+		\SetKwFunction{Continue}{continue}
+		\KwIn{A node and it's i'th key}
+		\KwResult{$predecessorNode$, $j$ where "predecessorNode" is the node that contain the predecessor key which is at position j }
+		\Begin{
+			\If{$parent.exsists == falsei == 0$ }
+			{
+				\Return{$null$}\;
+			}
+			\If{$i > 0$}
+			{
+				\If{$root.child(i).exists()$}
+				{
+					\Return{ \BTreeFindMax{\DISKREAD{$root.child(i)$}}}\;
+				}
+				\Else
+				{
+					\Return{$root, i-1$}
+				}
+			}
+			\If{$i == 0$}
+			{
+				$curNode \leftarrow root$\;
+				\While{$true$}
+				{
+					$curNode \leftarrow$ \DISKREAD{$curNode.parent$}\;
+					\For{$index \leftarrow 0;root[i] > curNode[index]$ {\bf and} $index < curNode.n;index++$}{}
+					\If{$root[i] > curNode[index]$}
+					{
+						$continue$\;
+					}
+					\Else
+					{
+						\Return{$curNode,index$}\;
+					}
+				}
+			}
+		}
+	\end{algorithm}
+	\noindent{\bf Part 2 Analysis:} This should take $O(log(h)t)$ time
+	\bigskip
 	
-\noindent{\bf Solution for Problem 4}\\
+	\noindent{\bf Solution for Problem 4}\\
+	Find the number of items that can fit into memory, load that much of the array into memory, Sort it. Continue loading contiguous pieces of the array into memory and sorting them. After the whole array has been pass through begin a series of merge passes. for $i = numberOfParts$ iterate through contiguous parts of the array merging them together one chunk at a time repeat this process until $i=1$. At this point the array will be sorted.
+	
 \end{document}

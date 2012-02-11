@@ -2,13 +2,13 @@ digraph g{
 	node [shape = record, height=.1];
 	node0[label = "<f0> | N | <f1>"];
 	
-	node1[label = "<f0> | E | <f1> | G | <f2>"];
+	node1[label = "<f0> | E | <f1> | H | <f2>"];
 	node2[label = "<f0> | <f1> T | <f2>"];
 
 	node3[label = "<f0> | B | <f1> | C | <f2>"];
 	node4[label = "<f0> | F | <f1>"];
-	node5[label = "<f0> | H | <f1> | K | <f2>"];
-	node6[label = "<f0> | O | <f1> | S | <f2>"];
+	node5[label = "<f1> | K | <f2>"];
+	node6[label = "<f0> | O | <f1> |"];
 	node7[label = "|X| |Y| | Z |"];
 	
 	"node0":f0 -> "node1":f1;
@@ -16,7 +16,7 @@ digraph g{
 	
 	"node1":f0 -> "node3":f1;
 	"node1":f1 -> "node4";
-	"node1":f2 -> "node5":f1;
-	"node2":f0 -> "node6":f1;
+	"node1":f2 -> "node5";
+	"node2":f0 -> "node6";
 	"node2":f2 -> "node7";
 }
