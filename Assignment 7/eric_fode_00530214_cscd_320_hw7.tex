@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphics,epsfig,color}
+\usepackage{wrapfig}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\pagestyle{fancy}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{openproblem}{Open Problem}[section]
+\newtheorem{fact}{Fact}[section]
+
+\newcommand{\qedsymb}{\hfill{\rule{2mm}{2mm}}}
+\newenvironment{proofsketch}
+{
+	\begin{trivlist}
+	\item[\hspace{\labelsep}{\noindent Proof Sketch: }]
+}{\qedsymb\end{trivlist}}
+
+
+
+%the following few lines until usepackage{algorithm2e} is to avoid the
+%conflicts of algorithm2e with other packages.
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\newcommand{\remove}[1]{}
+
+
+
+%--------------------------------
+
+
+\begin{document}
+
+	\renewcommand{\headrulewidth}{0.4pt}
+	\setlength{\headheight}{38.0pt}
+	\fancyhead[L]{\bf CSCD320 Homework 7, Winter 2012, 
+	Eastern Washington University. Cheney, Washington. \\
+	\bigskip Name: Eric Fode\hspace{40mm}EWU ID:00530214}
+
+	\noindent{\bf Solution for Problem 1}\\
+	1.Idea: Find an k such that it is the smallest value greater then all of the values to the right of j.  Swap j and k. Sort the elements to the right of j in ascending order. The last case is an edge case and the array will need to be reversed\\
+	2. Pseudocode:\\
+		\begin{algorithm}[H]
+				\NoCaptionOfAlgo
+				\caption{getNextPerm($set$)}
+				\KwIn{A set of numbers}
+				\KwResult{All of the permutations in lexicographical order}
+				$temp \leftarrow 0$\;
+				$j \leftarrow array.length-1$\;
+				$k \leftarrow array.length-1$\;
+				
+				\While{$r \geq s$}{
+					$j \leftarrow j-1$\;
+					\If{$j < 0$}
+					{
+							$reverse(array)$\;
+							\Return $array$\;	
+					}
+				\tcc{Find k}
+				\For{$array[j] > array[k]; j \leftarrow j-1$}{}
+				$swap(array[k],array[j])$\;
+				$sort(array[j+1],array[array.length])$\;
+				}
+				\Return $array$\;
+		\end{algorithm}
+		\noindent{}\\
+	3. Analysis of worst case running time: The worst case running time is $O(n)$ depending on the sort that is used. While it looks like it may be $O(n\log(n))$ because of the sort, the numbers in the worse case will always be out of order in a related way because of this you can pick a sort that will work optimally in this situation.\\
+	4. Example of worst case: $3 4 1 2$ would require the most work because k is as far away from j as possible making the sort function (the only part of this algorithm that is effect in more then a constant manner by changes in ordering) dominate the running time of this iteration.\\
+	5. Aggregate analysis: All operations in this algorithm take the same time during every permutation except for the sort, which over a sequence of iterations will add up to a constant value no matter what permutation you start with because on average it takes constant time. So all of the iterations have the same cost of $O(n)$ thus the amortized cost of each operation is $O(1)$.\\
+	6. Accounting analysis: This answer was gathered from research here \url{http://stackoverflow.com/questions/9560316/amortized-time-cost-using-accounting-method}
+	\begin{enumerate}
+		\item Measure the running time in terms of swaps since that is the only thing that costs anything (the other work per iteration is in the worst case the same as the number of swaps).
+		\item The swap of j and k has a amortized cost of 2 because of the sorting that is required (again the cost of the sort varies uniformly with every possible input for a given array size so it in effect can be reduced to a constant cost).
+		\item Now to show that we don't go into debt, it is enough to show that the swap of j and k leaves credit at position j, then every other swap will be guaranteed to have credit available at its position. Doing this establishes that between iterations, if an item is larger than the one immediately following it, then it was put in it's current position by a swap that left an as-yet unconsumed credit (from leaving a credit a position j).
+		\item So the amortized cost is $O(3) = O(1)$ two for j and k swap and one for all of the constant time operations.
+	\end{enumerate}
+	7. Potential method analysis:\\ research was done here:\\ \url{http://www.scielo.br/scielo.php?pid=S0104-65002001000200009&script=sci_arttext}\\
+From 1 to n let $c_i = 1 if \pi_i > \pi_i+1$ else $c_i = 0$ so for all iterations except the edge case let $c_i = 1$ and define the potential function $\phi(\pi) = \sum\limits_{i=1}^{n-1} c_i$ it is clear that for each iteration this function will increase so it is a valid potential function, so $ a = t + \delta\phi = O(1) $.
+\end{document}

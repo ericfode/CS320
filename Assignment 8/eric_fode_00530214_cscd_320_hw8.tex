@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphics,epsfig,color}
+\usepackage{wrapfig}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\pagestyle{fancy}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{openproblem}{Open Problem}[section]
+\newtheorem{fact}{Fact}[section]
+
+\newcommand{\qedsymb}{\hfill{\rule{2mm}{2mm}}}
+\newenvironment{proofsketch}
+{
+	\begin{trivlist}
+	\item[\hspace{\labelsep}{\noindent Proof Sketch: }]
+}{\qedsymb\end{trivlist}}
+
+
+
+%the following few lines until usepackage{algorithm2e} is to avoid the
+%conflicts of algorithm2e with other packages.
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\newcommand{\remove}[1]{}
+
+
+
+%--------------------------------
+
+
+\begin{document}
+
+	\renewcommand{\headrulewidth}{0.4pt}
+	\setlength{\headheight}{38.0pt}
+	\fancyhead[L]{\bf CSCD320 Homework 7, Winter 2012, 
+	Eastern Washington University. Cheney, Washington. \\
+	\bigskip Name: Eric Fode\hspace{40mm}EWU ID:00530214}
+
+	\noindent{\bf Solution for Problem 1}\\
+	Since all of the shortest paths in this graph happen to be the path directly from the source node to the destination nodes, I will just show what the trace would look like after all of the node adjacent to s were reached.
+	\bigskip	
+	\noindent{\bf Solution for Problem 2}\\
+	1. Pseudocode:\\
+		\begin{algorithm}[H]
+				\NoCaptionOfAlgo
+				\caption{getNextPerm($graphList$)}
+				\KwIn{A graph represented as an adjacency list}
+				\KwResult{A graph represented as a matrix}
+				\tcc{create a matrix of the proper size with all 0 values}
+				$matrix = int[graphList.V.size][graphList.V.size]$\;
+				
+				\For{$i \leftarrow 0$ \KwTo $graphList.V.size$ }
+				{
+					$edgeNode cur = graphList.V[i]$\;
+					\While{$graphList.V[i] != null$}
+					{
+						$matrix[i][edgeNode.outherNode] = 1$\;
+						$edgeNode = edgeNode.next$\;
+					}
+				}
+				\Return $matrix$\;
+		\end{algorithm}
+	2. Analysis of running time:$O(E)$\\
+	
+	\bigskip
+	\noindent{\bf Solution to problem 3}\\
+	1. Algorithm:
+	\begin{enumerate}
+		\item Set the starting point of the search and push it onto a stack s
+		\item Pop item i off s add to list l of visited verts
+		\item Push the adjacent verts of l.last using adjacency matrix $O(V)$
+		\item Goto 2 if s is not empty
+	\end{enumerate}
+	2. Problem: When using an adjacency matrix you have to iterate through every vertex to find the adjacent vertices. This is orders more expensive then just having the information you are looking for listed ( like in the adjacency list ). This is because matrix involves for every node a search and the list does not.\\
+	3. Time complexity: $O(V^2)$ as compared to $O(|V|+|E|)$
+\end{document}

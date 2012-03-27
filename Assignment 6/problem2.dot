@@ -1,1 +1,0 @@
-digraph%20G{edge[label=0];graph[ranksep=0];A[shape=record,label="{{A|2}|0000}"];D[shape=record,label="{{D|6}|0001}"];F[shape=record,label="{{F|9}|001}"];B[shape=record,label="{{B|20}|01}"];C[shape=record,label="{{C|25}|10}"];E[shape=record,label="{{E|25}|11}"];87->37->17->8->A;50->C;8->D[label=1];17->F[label=1];37->B[label=1];87->50->E[label=1];}
